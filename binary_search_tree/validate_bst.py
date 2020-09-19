@@ -23,4 +23,4 @@ def validate(node,min,max):
   if min is not None and node.val < min:
     return False
   return validate(node.left,min,node.val) and validate(node.right,node.val,max)
-print(validate(root,None,None))
+print(validate(root,None,None)) 
