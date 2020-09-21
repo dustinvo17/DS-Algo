@@ -1,3 +1,4 @@
+# Given a sorted array and a number, write a function that counts the occurences of the number in the array 
 def count_num(arr,num):
   start = 0 
   end = len(arr) - 1
@@ -35,3 +36,4 @@ def count_num(arr,num):
         break
 
 print(count_num([1,1,1,3,3,3,3,4,4,4,4,5,5,5,5],5))
+assert(count_num([1,1,1,3,3,3,3,4,4,4,4,5,5,5,5],5)) == 4
