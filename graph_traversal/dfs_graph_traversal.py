@@ -53,9 +53,9 @@ def graph_dfs_iterative(v):
   result = []
   visited = {v:True}
   while len(stack) > 0:   
-    out_vertext = stack.pop() 
-    result.append(out_vertext)   
-    for v_t in graph_adj_list[out_vertext]:
+    out_vertex = stack.pop() 
+    result.append(out_vertex)   
+    for v_t in graph_adj_list[out_vertex]:
       if v_t not in visited.keys():
         stack.append(v_t)
         visited[v_t] = True

@@ -19,9 +19,9 @@ def bfs_graph(v):
   result = []
   visited = {v:True}
   while len(queue) > 0:
-    out_vertext = queue.pop(0)
-    result.append(out_vertext)
-    for v_t in graph_adj_list[out_vertext]:
+    out_vertex = queue.pop(0)
+    result.append(out_vertex)
+    for v_t in graph_adj_list[out_vertex]:
       if v_t not in visited.keys():
         visited[v_t] = True
         queue.append(v_t)
