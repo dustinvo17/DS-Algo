@@ -24,7 +24,7 @@ class priority_queue:
   def dequeue(self):
     nodes = self.nodes
     current_index = 0
-    nodes[current_index] = nodes[len(nodes)-1]
+    nodes[current_index], nodes[len(nodes)-1] = nodes[len(nodes)-1],nodes[current_index]
     nodes.pop()
     # swap top priority to the bottom and remove it
     while True:
