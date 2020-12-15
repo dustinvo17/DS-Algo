@@ -28,3 +28,14 @@ function rotate(nums: number[], k: number): void {
     }
     
 };
+// optimoal 
+
+function rotate_optimal(nums: number[], k: number):void {
+    let new_array = [...nums]
+    for(let i = 0; i < nums.length; i++) {
+        new_array[(i + k) % nums.length] = nums[i]
+    }
+    for(let i = 0; i < nums.length; i++) {
+        nums[i] = new_array[i]
+    }
+}
