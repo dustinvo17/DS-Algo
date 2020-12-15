@@ -22,12 +22,11 @@
 class Solution(object):
     def maxProfit(self, prices):
         i = 0
-        j = 1
         current_buy = i
         max_profit_per_buy = 0
         total_max_profit = 0
         while i < len(prices):           
-            if j < len(prices) and prices[j] > prices[j - 1]: 
+            if prices[i] > prices[i - 1]: 
                 sell = prices[j]
                 buy = prices[i]
                 max_profit_per_buy = max(max_profit_per_buy,sell - buy)
