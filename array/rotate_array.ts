@@ -31,11 +31,28 @@ function rotate(nums: number[], k: number): void {
 // optimoal 
 
 function rotate_optimal(nums: number[], k: number):void {
-    let new_array = [...nums]
+    let new_array = new Array(nums.length)
     for(let i = 0; i < nums.length; i++) {
         new_array[(i + k) % nums.length] = nums[i]
     }
     for(let i = 0; i < nums.length; i++) {
         nums[i] = new_array[i]
+    }
+}
+// 
+function rotate_optimal_reverse(nums: number[], k: number):void {
+    k = k % nums.length
+    reverse(nums,0,nums.length - 1)
+    reverse(nums,0,k-1)
+    reverse(nums,k,nums.length - 1)
+}
+
+function reverse(nums:number[],start:number,end:number) {
+    while(start < end){
+        const temp = nums[start]
+        nums[start] = nums[end]
+        nums[end] = temp
+        start +=1
+        end -= 1
     }
 }
